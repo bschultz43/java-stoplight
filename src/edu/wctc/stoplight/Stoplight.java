@@ -17,23 +17,23 @@ public class Stoplight {
     }
 
     public void controlTraffic() {
-        Light temp = currentLight.switchLight();
+        Light nextLight = currentLight.switchLight();
 
-        if(temp != null) {
-            currentLight = temp;
+        if(nextLight != null) {
+            currentLight = nextLight;
         }
         else
         {
             //if you've reached the top, move back two lights
-            temp = currentLight.getPrevious();
-            currentLight = temp.getPrevious();
+            nextLight = currentLight.getPrevious();
+            currentLight = nextLight.getPrevious();
         }
     }
 
     public String trafficResponse(Car car) {
         if(currentLight instanceof Enforceable)
             return ((Enforceable)currentLight).enforceRule(car);
-        return "Light is broken. Temporary stop sign.";
+        return "Light is broken. Temporary stop sign. Sorry for the convenience.";
     }
 
     @Override

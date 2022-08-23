@@ -8,7 +8,6 @@ public class GreenLight extends Light implements Enforceable {
 
     public String enforceRule(Car car) {
         car.setStatus("moving");
-        car.moveCar();
 
         return(car.toString());
     }

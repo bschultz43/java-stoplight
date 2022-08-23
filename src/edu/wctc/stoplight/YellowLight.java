@@ -8,7 +8,6 @@ public class YellowLight extends Light implements Enforceable {
 
     public String enforceRule(Car car) {
         car.setStatus("slowing");
-        car.moveCar();
 
         return(car.toString());
     }

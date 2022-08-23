@@ -6,7 +6,8 @@ public class Main {
         Stoplight stoplight = new Stoplight();
         Car car = new Car();
 
-        for(int i = 0; i < 8; i++) {
+        //Test out a few stoplight events
+        for(int i = 0; i < 6; i++) {
             System.out.println(stoplight);
             System.out.println(stoplight.trafficResponse(car));
             stoplight.controlTraffic();

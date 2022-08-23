@@ -8,7 +8,6 @@ public class RedLight extends Light implements Enforceable {
 
     public String enforceRule(Car car) {
         car.setStatus("stopped");
-        car.stopCar();
 
         return(car.toString());
     }
