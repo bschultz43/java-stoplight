@@ -1,6 +1,6 @@
 package edu.wctc.stoplight;
 
-public class Light {
+public abstract class Light {
     private boolean isLit;
     private String color;
     private Light above, below;

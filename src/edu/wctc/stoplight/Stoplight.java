@@ -31,8 +31,8 @@ public class Stoplight {
     }
 
     public String trafficResponse(Car car) {
-        if(currentLight instanceof Enforceable)
-            return ((Enforceable)currentLight).enforceRule(car);
+        if(currentLight instanceof Enforceable enforceRuleLight)
+            return enforceRuleLight.enforceRule(car);
         return "Light is broken. Temporary stop sign. Sorry for the convenience.";
     }
 
